@@ -1,0 +1,129 @@
+/* start custom scss snippet */
+
+
+$layoutt: (
+  header-height:          5rem,
+  header-height-sm:       3rem,
+  content-max-width:      950px,
+  sidebar-width:          250px,
+  sidebar-header-height:  3rem,
+   aside-width:            220px
+   );
+
+$fonts:(
+
+	font-weight : 640 ,
+	footer_font: .9rem,
+);
+
+$header_color:      #272727;
+$header_link_color: #67d8ef;
+$font_color:        #FFF ;
+
+.header {
+  background: $header_color;
+  a {
+    font-weight: map-get($fonts, font-weight);
+    text-decoration: none !important;
+    @include link-colors($font_color, $header_link_color);
+  }
+  .main {
+    @include flexbox();
+    @include media-breakpoint-down(md) {
+      @include flex-direction(column);
+    }
+  }
+}
+
+
+.header__title {
+  @include menu(3, 0);
+  @include align-items(center);
+  @include flex-wrap(nowrap);
+  @include flex(1);
+  height: map-get($layoutt, header-height);
+  margin-right: map-get($spacers, 3);
+  white-space: nowrap;
+  @include media-breakpoint-down(md) {
+    height: auto;
+
+    margin-right: 0;
+  }
+  & > .header__brand {
+    @include flex(1);
+    @include media-breakpoint-down(md) {
+      height: map-get($layout, header-height-sm);
+    }
+  }
+  & > .search-button {
+    display: none;
+    margin-left: map-get($spacers, 2);
+    @include media-breakpoint-down(md) {
+      @include flexbox();
+    }
+  }
+}
+
+.footer {
+  @include flexbox();
+  @include align-items(center);
+  color: $font_color;
+  background: $header_color;
+  a {
+    @include link-colors ($font_color, $main-color-1);
+  }
+  .site-info {
+    font-size: map-get($fonts, footer_font);
+    text-align: center;
+    .menu {
+      line-height: map-get($base, line-height-xs);
+      & > * {
+        &:not(:last-child) {
+          @include split-line(right, default, $footer-text-color);
+          padding-right: map-get($spacers, 1);
+          margin-right: map-get($spacers, 1);
+        }
+      }
+    }
+  }
+
+
+
+}
+
+.header__brand {
+  @include flexbox();
+  @include align-items(center);
+  & > svg {
+    width: map-get($base, font-size-h1) * 1.6;
+    height: map-get($base, font-size-h1) * 1.6;
+    margin-right: map-get($spacers, 3);
+    vertical-align: middle;
+
+    @include media-breakpoint-down(md) {
+      width: map-get($base, font-size-h4) * 1.2;
+      height: map-get($base, font-size-h4) * 1.2;
+    }
+  }
+  & > a {
+    display: inline-block;
+    font-size: map-get($base, font-size-h2)-0.2;
+    font-family: 'Merriweather';
+    font-weight:map-get($fonts , font-weight);
+                                                
+    @include media-breakpoint-down(md) {
+      font-size: map-get($base, font-size-h4-small);
+    }
+  }
+}
+
+
+.footer__author-links {
+  @include overflow(auto);
+  .author-links {
+    text-align: center;
+  }
+}
+
+
+/* end custom scss snippet */
