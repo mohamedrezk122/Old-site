@@ -66,7 +66,7 @@ $$q = 1-q  = \frac{1}{2}$$
 
 <div style="text-align:center"><img src="\assets\images\post_1\1.png" /></div>
 
-After sometime, the particle made some jumps $k$ to the right and the rest to the left , so the probability of finding  this particle at position $x$ after $N$ jumps can be modeled accuretly by the binomial probability distribution function:
+After sometime, the particle made some $k$ jumps to the right and the rest to the left , so the probability of finding  this particle at position $x$ after $N$ jumps can be modeled accuretly by the binomial probability distribution function:
 
 
 
@@ -125,10 +125,10 @@ $$f'(x) = \frac{f(x) - f(x-h)}{h} +\mathcal{O}(h)$$
 
 #### Central Difference Scheme
 
-Both forward and backward difference techniques have the same error which grows with $h$
+Both forward and backward difference techniques have the same error which grows linearly with $h$...
 Can we do better ? Yeah , of course.
 
-By adding equation $(1)$ and $(2)$ we get:
+By adding equation $(1)$ and $(2)$, we have:
 
 $$f'(x) = \frac{f(x+h) - f(x-h)}{2h} +E(h)$$
 
@@ -146,9 +146,14 @@ $$\frac{d^2f}{dx^2} = \frac{f(x+h)-2f(x) +f(x-h)}{h^2} $$
 
 **Discrete Solution**
 
+Using a 4-point stencil we can solve the 1D diffusion equation.
+
+
 $$\frac{u_{i}^{n} - u_{i}^{n-1}}{\Delta t } = D \frac{u_{i+1} - 2u_i+u_{i-1}}{h^2}$$
 
 $$u_{i}^{n} = u_{i}^{n-1}+ D \Delta t \left(\frac{u_{i+1} - 2u_i+u_{i-1}}{h^2}\right)$$
+
+Note that $i$ is for spatial step in $x$ , while $n$ is for time step.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\stencil.png" />
@@ -180,9 +185,14 @@ $$\rho = Cor(x,y) = \frac{\sigma_{xy}}{\sigma_x\sigma_y} $$
 
 **Discrete Solution**
 
+Similarly,using a 6-point stencil we can solve the 2D diffusion equation.
+
+
 $$\frac{u_{i,j}^{n} - u_{i,j}^{n-1}}{\Delta t } = D\left(\frac{u_{i+1,j} - 2u_{i,j}+u_{i-1,j}}{\Delta x^2}+\frac{u_{i,j+1} - 2u_{i,j}+u_{i,j-1}}{\Delta y^2}\right)$$
 
 $$u_{i,j}^{n} = u_{i,j}^{n-1}+ D \Delta t \left(\frac{u_{i+1,j} - 2u_{i,j}+u_{i-1,j}}{\Delta x^2}+\frac{u_{i,j+1} - 2u_{i,j}+u_{i,j-1}}{\Delta y^2}\right)$$
+
+Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\stencil22.png" /> 
@@ -212,7 +222,7 @@ $$u_{i,j}^{n} = u_{i,j}^{n-1}+ D \Delta t \left(\frac{u_{i+1,j} - 2u_{i,j}+u_{i-
 </figure>
  -->
 
-Brownian motion is a form of stochastic motion of particles induced by random collisions with surrounding gaseous molecules combined with Diffusiophoresis you can get an approximate particle diffusion simulation. Diffusiophoresis is a spontaneous movement of the bulk of particles controlled by the concentration gradient. It also obeys the formula of approximated Gaussian density function we have driven. There are some simulation methods we can use to describe a Brownian Motion: **Einstein-Smoluchowski's**, which treats the whole situation as a random walk model, and **Langevin's theory**, which, on the other hand, involves a differential equation to describe the Brownian motion of the particles.
+Brownian motion is a form of stochastic motion of particles induced by random collisions with surrounding gaseous molecules combined with Diffusiophoresis you can get an approximate particle diffusion simulation. Diffusiophoresis is a spontaneous movement of the bulk of particles controlled by the concentration gradient. It also obeys the formula of approximated Gaussian density function we have derived. There are some simulation methods we can use to describe a Brownian Motion: **Einstein-Smoluchowski's**, which treats the whole situation as a random walk model, and **Langevin's theory**, which, on the other hand, involves a differential equation to describe the Brownian motion of the particles.
 
 ### Einstein-Smoluchowski's Theory
 
