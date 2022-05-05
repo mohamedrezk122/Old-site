@@ -51,7 +51,7 @@ After sometime, the particle made some jumps $k$ to the right and the rest to th
 
 
 
-$$u(k,N) = \binom{N}{k} q^k(1-q)^{N-k}$$
+$$u(k,N) = \binom Nk q^k(1-q)^{N-k}$$
 
 $$x = kl - (N-k)l \rightarrow k = \frac{1}{2}\left(N+\frac{x}{l}\right) $$
 
