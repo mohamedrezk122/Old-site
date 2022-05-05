@@ -261,7 +261,7 @@ As opposed to the 1D case, the particle is free to move in all directions, so we
 
 $$\theta \in [0,2\pi] \;\;\; \rightarrow  \;\;\; k_{2D} = \cos{\theta}\;\hat{x} + \sin{\theta}\;\hat{y} $$ 
 
-So, what we have to do is just adding some particles to the screen and let them spread out; however, the internal forces of attraction and gravity are neglected in this model. The initial setup should look like this:
+So, what we have to do is just adding some particles to the screen and let them spread out, but bare in mind that the internal forces of attraction and gravity are neglected in this model. The initial setup should look like this:
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\sim.png" />
