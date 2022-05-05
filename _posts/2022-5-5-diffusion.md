@@ -104,21 +104,21 @@ Mainly,there are 3 ways to compute derivatives numerically (forward scheme , bac
 
 With Taylor expansion, we get:
 
-$$f(x+h) = \sum_{n=0}^{\infty} h^n \frac{f^{(n)}(x)}{n!} = f(x) + hf'(x) + h^2\frac{f''(x)}{2!} + h^3\frac{f''(x)}{3!}+ ... $$
+$$f(x+h) = \sum_{n=0}^{\infty} h^n \frac{f^{(n)}(x)}{n!} = f(x) + hf'(x) + h^2\frac{f''(x)}{2!} + h^3\frac{f'''(x)}{3!}+ ... $$
 
 Solving for $f'(x)$
 
-$$f'(x) = \frac{1}{h}\left(f(x+h) - f(x) - h^2\frac{f''(x)}{2!} - h^3\frac{f''(x)}{3!}- ... \right)\;\;\;\; \rightarrow (1)$$
+$$f'(x) = \frac{1}{h}\left(f(x+h) - f(x) - h^2\frac{f''(x)}{2!} - h^3\frac{f'''(x)}{3!}- ... \right)\;\;\;\; \rightarrow (1)$$
 
 $$f'(x) = \frac{f(x+h) - f(x)}{h} +\mathcal{O}(h)$$
 
 #### Backward Difference Scheme
 
-$$f(x-h) = \sum_{n=0}^{\infty} (-h)^n \frac{f^{(n)}(x)}{n!} = f(x) - hf'(x) + h^2\frac{f''(x)}{2!} - h^3\frac{f''(x)}{3!}+ ... $$
+$$f(x-h) = \sum_{n=0}^{\infty} (-h)^n \frac{f^{(n)}(x)}{n!} = f(x) - hf'(x) + h^2\frac{f''(x)}{2!} - h^3\frac{f'''(x)}{3!}+ ... $$
 
 Solving for $f'(x)$
 
-$$f'(x) = \frac{1}{h}\left(f(x) - f(x-h) + h^2\frac{f''(x)}{2!} - h^3\frac{f''(x)}{3!}+ ... \right)   \;\;\;\; \rightarrow (2)$$
+$$f'(x) = \frac{1}{h}\left(f(x) - f(x-h) + h^2\frac{f''(x)}{2!} - h^3\frac{f'''(x)}{3!}+ ... \right)   \;\;\;\; \rightarrow (2)$$
 
 $$f'(x) = \frac{f(x) - f(x-h)}{h} +\mathcal{O}(h)$$
 
@@ -138,7 +138,7 @@ which can be rewritten as :
 
 $$f'(x) = \frac{f(x+h) - f(x-h)}{2h} +\mathcal{O}(h^2)$$
 
-since $ 0 < h < 1$, $\mathcal{O}(h^2)$ is so small. So, central difference technique is much better than forward and backward difference.
+since $ 0 < h < 1$, $\mathcal{O}(h^2)$ as an error is so small. So, central difference technique is much better than forward and backward difference.
 
 Applying central difference technique to solve for $\frac{d^2f}{dx^2} $
 
@@ -177,7 +177,7 @@ The generalized bi-variate Gaussian distribution function is given by:
 
 $$u(x,y) = \frac{1}{2\pi\sigma_x\sigma_y\sqrt{1-\rho^2}} \exp{\left[-\frac{Z}{2(1-\rho^2)}\right]}$$
 
-$$Z = \frac{x-\mu_x}{\sigma_x^2}-\frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}+\frac{y-\mu_y}{\sigma_y^2}$$
+$$Z = \frac{(x-\mu_x)^2}{\sigma_x^2}-\frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}+\frac{(y-\mu_y)^2}{\sigma_y^2}$$
 
 where:
 
