@@ -192,6 +192,8 @@ $$\frac{u_{i,j}^{n} - u_{i,j}^{n-1}}{\Delta t } = D\left(\frac{u_{i+1,j} - 2u_{i
 
 $$u_{i,j}^{n} = u_{i,j}^{n-1}+ D \Delta t \left(\frac{u_{i+1,j} - 2u_{i,j}+u_{i-1,j}}{\Delta x^2}+\frac{u_{i,j+1} - 2u_{i,j}+u_{i,j-1}}{\Delta y^2}\right)$$
 
+To make things more simple for us, we are going to set $\Delta x = \Delta y$
+
 Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
 
 <div style="text-align:center">
@@ -199,12 +201,16 @@ Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
   <div class="caption">3D (6-point) stencil</div>
 </div>
 
+
+
 **Simulation**
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\animation2.gif" />
   <div class="caption">2D Diffusion equation Simulation</div>
 </div>
+
+Now, it the time to head the real physical system and how it operates in the form of a brownian motion.
 
 ## Brownian Motion
 
@@ -222,7 +228,7 @@ Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
 </figure>
  -->
 
-Brownian motion is a form of stochastic motion of particles induced by random collisions with surrounding gaseous molecules combined with Diffusiophoresis you can get an approximate particle diffusion simulation. Diffusiophoresis is a spontaneous movement of the bulk of particles controlled by the concentration gradient. It also obeys the formula of approximated Gaussian density function we have derived. There are some simulation methods we can use to describe a Brownian Motion: **Einstein-Smoluchowski's**, which treats the whole situation as a random walk model, and **Langevin's theory**, which, on the other hand, involves a differential equation to describe the Brownian motion of the particles.
+Brownian motion is a form of stochastic motion of particles induced by random collisions with surrounding fluid molecules combined with Diffusiophoresis you can get an approximate particle diffusion simulation. Diffusiophoresis is a spontaneous movement of the bulk of particles controlled by the concentration gradient. It also obeys the formula of approximated Gaussian density function we have derived. There are some simulation methods we can use to describe a Brownian Motion: **Einstein-Smoluchowski's**, which treats the whole situation as a random walk model, and **Langevin's theory**, which, on the other hand, involves a differential equation to describe the Brownian motion of the particles.
 
 ### Einstein-Smoluchowski's Theory
 
