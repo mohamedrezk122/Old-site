@@ -22,7 +22,7 @@ author: Mohamed Rezk
 
 ## Motivation 
 
-Recently, I have been watching the office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant (to) the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
+Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant (to) the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\d1.png" />
@@ -78,13 +78,13 @@ According to central limit theorem : For large values of  N $(>30)$ , the binomi
 
 $$\langle x \rangle = \sum_{i=1}^{N} \langle x_i \rangle = N(ql-(1-q)l)$$
 
-Obviously, for the unbiased case $\langle x \rangle = 0$
+Obviously, for the unbiased case, $\langle x \rangle = 0$
 
 $$\sigma^2 = \langle x^2 \rangle - \langle x \rangle ^2 = 4Nl^2q(1-q)$$
 
 which simply yields:
 
-$$u(x,N) \approx \frac{1}{\sigma\sqrt{2\pi}} \exp\left[-\frac{x-\langle x \rangle}{2\sigma^2}\right]$$
+$$u(x,N) \approx \frac{1}{\sigma\sqrt{2\pi}} \exp\left[-\frac{(x-\langle x \rangle)^2}{2\sigma^2}\right]$$
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\4.png" />
