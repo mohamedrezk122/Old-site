@@ -4,7 +4,9 @@ article_header:
   type: cover
   image:
     src: /assets/images/post_1/cover.png
+# date : 
 ---
+
 ## Motivation 
 
 Recently, I have been watching the office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
@@ -51,7 +53,7 @@ After sometime, the particle made some jumps $k$ to the right and the rest to th
 
 
 
-$$u(k,N) = \binom Nk q^k(1-q)^{N-k}$$
+$$u(k,N) = {N\choose k}\; q^k(1-q)^{N-k}$$
 
 $$x = kl - (N-k)l \rightarrow k = \frac{1}{2}\left(N+\frac{x}{l}\right) $$
 
