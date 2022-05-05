@@ -21,9 +21,7 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : https://mohamedrezk122.github.io
 baseurl : 
 title   : The Computation Side of Things
-description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
-
+description: 
 
 ## => Language and Timezone
 ##############################
@@ -55,7 +53,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: mohamedrezk122/The-Computation-Side-Of-Things
+repository: mohamedrezk122/mohamedrezk122.github.io
 repository_tree: gh_pages
 
 
