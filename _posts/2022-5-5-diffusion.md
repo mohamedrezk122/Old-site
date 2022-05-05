@@ -136,7 +136,7 @@ $$E(h) = -h^2\frac{f'''(x)}{3!} - h^4\frac{f'''''(x)}{5!}-...$$
 
 which can be rewritten as :
 
-$$f'(x) = \frac{f(x) - f(x-h)}{h} +\mathcal{O}(h^2)$$
+$$f'(x) = \frac{f(x+h) - f(x-h)}{2h} +\mathcal{O}(h^2)$$
 
 since $ 0 < h < 1$, $\mathcal{O}(h^2)$ is so small. So, central difference technique is much better than forward and backward difference.
 
