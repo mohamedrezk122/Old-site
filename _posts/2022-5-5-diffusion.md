@@ -1,15 +1,28 @@
 ---
-title:  "Diffusion Equation: a computational approach" 
+title:  "Diffusion Equation: a computational approach"
 article_header:
-  type: cover
-  image:
-    src: /assets/images/post_1/cover.png
-# date : 
+  type: overlay
+  theme: dark
+  background_color: "#343434"
+  background_image:
+    src: /assets/images/post_1/cover22.png
+
+excerpt:  My little journey in solving, computing, and simulating
+ diffusion equation with simple approaches and in a fun way.
+
+permalink: diffusion-equation
+tags : Applied-Mathematics  Computational-Physics Fluid-Mechanics
+author: Mohamed Rezk
 ---
+## Prerequisites
+
+- High school calculus or beyond
+- Probability
+- Some basic physics.
 
 ## Motivation 
 
-Recently, I have been watching the office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
+Recently, I have been watching the office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant (to) the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\d1.png" />
@@ -29,6 +42,10 @@ $u$ is the function we are interested in (e.g. particle density in space).\\
 $v$ is the velocity field representing how fast the physical quantity moves as a function of both time and space.\\
 $D$ is the Diffusion coefficient.\\
 $S$ is the sinks ($S<0$) or sources ($S>0$) term, which describes the general behavior of particles evolution (generated or dissipated). 
+
+It might seem obvious that the diffusion coefficient $D$ has a dependence relation on temperature $T$ , how large the particle is (radius $r$), and how easily the particle can diffuse through the host medium $(\mu)$. In fact, the general formula for the diffusion coefficient can be formulated as:
+
+$$D = \frac{kT}{6\pi\mu r}$$
 
 ## Common Reduction
 In some applications, the $S$ term is omitted causing a small error. In addition, the convection term can be neglected when we are not interested in the effect of particles velocity . So the reduced form is:
@@ -235,6 +252,16 @@ So, what we have to do is just adding some particles to the screen and let them 
   <div class="caption">2D particles diffusion Simulation</div>
 </div>
 
+<!-- 
+<figure class="video_container" style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QI2wF5Yuxsg/showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+ -->
+
+<div>{%- include extensions/youtube.html id='QI2wF5Yuxsg' -%}</div>
+
+
+
 **3D case**
 
 Now we have a bit of a trouble here  generating random coordinates. The common way to do it  is to use the parameters of the spherical coordinate $(\theta,  \phi)$, but the randomized movement vector $k_{3D}$ will not be uniform over the surface of the unit sphere; however, the points will be more dense near the poles and sparse near the equator.
@@ -265,8 +292,8 @@ $$ a ,b,c \in [-1,1] \;\;\; \rightarrow  \;\;\; k_{3D} = \alpha\;\hat{x} + \beta
 
 We can use this way in the 2D case, but the 2D randomization is already uniform, so we anticipate getting similar results.
 
-Finally the simulation is here....
-
+<!-- Finally the simulation is here....
+ -->
 ### Langevin Theory
 
 This model is more accurate than Einstein-Smoluchowski's model as it takes into account the forces act on the system, and also follows newton second law.
@@ -292,3 +319,5 @@ We are not going to dig further into Langevin model, but we might conclude that 
 [Solving Diffusion Equation (Article)](http://hplgit.github.io/num-methods-for-PDEs/doc/pub/diffu/sphinx/._main_diffu001.html)
 
 [Two Simulation Methods of Brownian Motion (Paper)](https://iopscience.iop.org/article/10.1088/1742-6596/2012/1/012015/pdf)
+
+

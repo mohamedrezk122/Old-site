@@ -16,6 +16,7 @@
 }
 .author-profile__name {
   font-size: map-get($base, font-size-lg);
+
   font-weight: map-get($base, font-weight-bold);
   a {
     @include link-colors($text-color, $main-color-1);
