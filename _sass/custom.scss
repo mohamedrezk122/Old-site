@@ -107,7 +107,7 @@ $font_color:        #FFF ;
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h2)-0.2;
+    font-size: map-get($base, font-size-h2);
     font-family: 'Merriweather';
     font-weight:map-get($fonts , font-weight);
                                                 

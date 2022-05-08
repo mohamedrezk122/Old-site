@@ -6,7 +6,8 @@ article_header:
   background_color: "#343434"
   background_image:
     src: /assets/images/post_1/cover22.png
-
+# cover: /assets/images/post_1/d1.png
+# cover_size : lg
 excerpt:  My little journey in solving, computing, and simulating
  diffusion equation with simple approaches and in a fun way.
 
