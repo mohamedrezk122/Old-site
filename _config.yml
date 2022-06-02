@@ -82,7 +82,7 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: true
+mathjax: false
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid
@@ -167,12 +167,12 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: "google" # false (default), "google", "custom"
+  provider: #"google" # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : G-7NBSBNJPXW # Google Analytics id for the site
-    anonymize_ip: false # Anonymize IP tracking for Analytics
+    tracking_id : #G-7NBSBNJPXW # Google Analytics id for the site
+    anonymize_ip: #false # Anonymize IP tracking for Analytics
 
 
 ## => Build
